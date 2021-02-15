@@ -1,4 +1,4 @@
-# [Argon Design System Angular](https://demos.creative-tim.com/argon-design-system-angular/?ref=adsa-github-readme) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Argon%20Design%20is%20a%20Free%20Bootstrap%20and%20Angular%20Design%20Sysyem%20made%20using%20angular-cli%20%E2%9D%A4%EF%B8%8F%0Ahttps%3A//demos.creative-tim.com/argon-design-system-angular%20%23angular%20%23angular-cli%20%23argon%20%23argondesign%20%23angular%20%23argonangular%20%23angulardesign%20%23bootstrap%20%23design%20%23uikit%20%23freebie%20%20via%20%40CreativeTim)
+# [Techievibe UI](https://demos.creative-tim.com/argon-design-system-angular/?ref=adsa-github-readme) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Argon%20Design%20is%20a%20Free%20Bootstrap%20and%20Angular%20Design%20Sysyem%20made%20using%20angular-cli%20%E2%9D%A4%EF%B8%8F%0Ahttps%3A//demos.creative-tim.com/argon-design-system-angular%20%23angular%20%23angular-cli%20%23argon%20%23argondesign%20%23angular%20%23argonangular%20%23angulardesign%20%23bootstrap%20%23design%20%23uikit%20%23freebie%20%20via%20%40CreativeTim)
 
 
 
@@ -6,7 +6,7 @@
 
 **Fully Coded Components**
 
-Argon Design System Angular is built with over 100 individual components, giving you the freedom of choosing and combining. All components can take variations in color, that you can easily modify using SASS files.
+Techievibe UI is built with over 100 individual components, giving you the freedom of choosing and combining. All components can take variations in color, that you can easily modify using SASS files.
 You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. This Kit is coming with pre-built examples, so the development process is seamless, switching from our pages to the real website is very easy to be done.
 Every element has multiple states for colors, styles, hover, focus, that you can easily access and use.
 
@@ -40,7 +40,7 @@ If you want to get inspiration or just show something directly to your clients, 
 
 | HTML | Angular | Vue  |
 | --- | --- | ---  |
-| [![Argon Design System HTML](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system/argon-design-system.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system?ref=adsa-github-readme)  | [![Argon Design System Angular](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-angular/argon-design-system-angular.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-github-readme)  | [![Vue Argon Design System](https://github.com/creativetimofficial/public-assets/blob/master/vue-argon-design-system/vue-argon-design-system.jpg?raw=true)](https://www.creative-tim.com/product/vue-argon-design-system?ref=adsa-github-readme)
+| [![Techievibe UI HTML](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system/argon-design-system.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system?ref=adsa-github-readme)  | [![Techievibe UI](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-angular/argon-design-system-angular.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-github-readme)  | [![Vue Techievibe UI](https://github.com/creativetimofficial/public-assets/blob/master/vue-argon-design-system/vue-argon-design-system.jpg?raw=true)](https://www.creative-tim.com/product/vue-argon-design-system?ref=adsa-github-readme)
 
 
 ## Demo
@@ -65,7 +65,7 @@ If you want to get inspiration or just show something directly to your clients, 
 
 
 ## Documentation
-The documentation for the Argon Design System Angular is hosted at our [website](https://demos.creative-tim.com/argon-design-system-angular/documentation/tutorial?ref=adsa-github-readme).
+The documentation for the Techievibe UI is hosted at our [website](https://demos.creative-tim.com/argon-design-system-angular/documentation/tutorial?ref=adsa-github-readme).
 
 
 ## File Structure
@@ -233,9 +233,9 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Argon Design System Angular. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for the Techievibe UI. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Argon Design System Angular. Check the CHANGELOG from your kit on our [website](https://www.creative-tim.com/?ref=ada-github-readme).
+1. Make sure that you are using the latest version of the Techievibe UI. Check the CHANGELOG from your kit on our [website](https://www.creative-tim.com/?ref=ada-github-readme).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 

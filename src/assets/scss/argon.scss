@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Argon Design System Angular - v1.2.0
+* Techievibe UI - v1.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-design-system-angular
