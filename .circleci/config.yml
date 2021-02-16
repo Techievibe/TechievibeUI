@@ -1,13 +1,53 @@
 # Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
-# Use a package of configuration called an orb.
-orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
+version: 2
+
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
-  welcome:
+  version: 2
+  master-pipeline:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      - setup-install-configure
+      - build-code:
+          requires: [setup-install-configure]
+          filters:
+            branches:
+              only:
+                - master
+
+step-attach_workspace_to_current_directory:
+  &step-attach_workspace_to_current_directory
+  attach_workspace:
+    at: "."
+
+step_install_node: &step-install_node
+  run:
+    name: "Install Node"
+    command: "curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs"
+
+step_install_angular_cli: &step-install_angular_cli
+  run:
+    name: "Install Angular CLI"
+    command: "npm install -g @angular/cli"
+
+step_install_npm_dependencies: &step-install_npm_dependencies
+  run:
+    name: "Install Dependencies"
+    command: "npm install"
+
+step-persist_workspace_step: &step-persist_workspace
+  persist_to_workspace:
+    root: "."
+    paths: ["."]
+
+jobs:
+  setup-install-configure:
+  <<: *node-job
+    steps:
+      - *step-attach_workspace_to_current_directory
+      - checkout
+      - *step-install_node
+      - *step-install_angular_cli
+      - *step-install_npm_dependencies
+      - *step-persist_workspace
