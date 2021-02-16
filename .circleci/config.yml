@@ -43,7 +43,6 @@ step-persist_workspace_step: &step-persist_workspace
 
 jobs:
   setup-install-configure:
-  <<: *node-job
     steps:
       - *step-attach_workspace_to_current_directory
       - checkout
