@@ -3,10 +3,6 @@
     <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
       <img src="./assets/img/techievibe/logo/logo.png">
     </a>
-    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
-          [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
       <div class="navbar-collapse-header">
         <div class="row">
@@ -24,9 +20,148 @@
           </div>
         </div>
       </div>
-      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+      <div>
+        <div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-left">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+                <span class="btn-inner--icon">
+                  <i class="fa fa-sign-in mr-2"></i>
+                </span>
+                <span class="nav-link-inner--text">Sign In</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-right">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+                <span class="btn-inner--icon">
+                  <i class="fa fa-user-plus mr-2"></i>
+                </span>
+                <span class="nav-link-inner--text">Sign Up</span>
+              </a>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <span class="text-uppercase">Blogs</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="ni ni-palette"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Aarush Artz</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="ni ni-books"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Pavi Readz</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Everything Else</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <span class="text-uppercase">Fantasy Sport</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="ni ni-palette"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Cricket</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="ni ni-books"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Basketball</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Others</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <span class="text-uppercase">Like/Share/Follow us</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none flex-row">
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-facebook"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-twitter"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-instagram"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-github"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="clear:both;" class="d-lg-none"></div>
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none d-none d-lg-block">
         <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" role="button" href="#">
+          <a class="nav-link" data-toggle="dropdown" dropdowntoggle role="button" aria-haspopup="true">
             <i class="ni ni-ui-04 d-lg-none"></i>
             <span class="nav-link-inner--text">Blogs</span>
           </a>
@@ -101,25 +236,25 @@
         </li>
       </ul>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://www.facebook.com/phani.narra" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
             <i class="fa fa-facebook-square"></i>
             <span class="nav-link-inner--text d-lg-none">Facebook</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://www.instagram.com/narra_phani/" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
             <i class="fa fa-instagram"></i>
             <span class="nav-link-inner--text d-lg-none">Instagram</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://twitter.com/phani131" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
             <i class="fa fa-twitter-square"></i>
             <span class="nav-link-inner--text d-lg-none">Twitter</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://github.com/phaninarra" target="_blank" data-toggle="tooltip" title="Star us on Github">
             <i class="fa fa-github"></i>
             <span class="nav-link-inner--text d-lg-none">Github</span>
@@ -146,5 +281,9 @@
         </li>
       </ul>
     </div>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
