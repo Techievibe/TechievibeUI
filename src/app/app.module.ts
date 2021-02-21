@@ -16,6 +16,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
 
+// Import the Auth module from the SDK
+import { AuthModule } from '@auth0/auth0-angular';
+import { CallbackComponent } from './shared/callback/callback.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,8 @@ import { LoginComponent } from './login/login.component';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,12 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    // Import the module into the application, with configuration
+    AuthModule.forRoot({
+      domain: 'techievibe.us.auth0.com',
+      clientId: 'zkz7UuKemxXblUsqVCY4OXtpQCenjy21'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

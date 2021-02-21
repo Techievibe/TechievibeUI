@@ -24,7 +24,7 @@
         <div>
           <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-left">
             <li class="nav-item d-lg-none ml-lg-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+              <a href="#" (click)="auth0Service.loginWithRedirect()" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <i class="fa fa-sign-in mr-2"></i>
                 </span>
@@ -261,13 +261,21 @@
           </a>
         </li>
         <li class="nav-item d-none d-lg-block ml-lg-4">
-          <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+          <a href="#" (click)="auth0Service.loginWithRedirect()" class="btn btn-neutral btn-icon">
             <span class="btn-inner--icon">
               <i class="fa fa-sign-in mr-2"></i>
             </span>
             <span class="nav-link-inner--text">Sign In</span>
           </a>
         </li>
+        <!-- <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a href="#" (click)="auth0Service.logout({ returnTo: http://localhost:3899/landing })" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-sign-in mr-2"></i>
+            </span>
+            <span class="nav-link-inner--text">Sign Out</span>
+          </a>
+        </li> -->
         <li class="nav-item d-none d-lg-block ml-lg-4">
             <span class="nav-link-inner--text text-white">OR</span>
         </li>
