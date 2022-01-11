@@ -1,5 +1,5 @@
 <footer class="footer" [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
-  <div class="container container-lg" *ngIf="getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'">
+  <!-- <div class="container container-lg" *ngIf="getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'">
     <div class="row">
       <div class="col-md-6 mb-5 mb-md-0">
         <div class="card card-lift--hover shadow border-0">
@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="container">
     <div class="row row-grid align-items-center" [ngClass]="{'my-md': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login', 'mb-5':getPath()==='/user-profile' || getPath()==='/register' || getPath()==='/login'}">
       <div class="col-lg-6">
@@ -43,16 +43,16 @@
       <div class="col-md-6">
         <div class="copyright">
           &copy; {{test | date: 'yyyy'}}
-          <a href="/" target="_blank">Techievibe</a>.
+          <a href="/">Techievibe</a>.
         </div>
       </div>
       <div class="col-md-6">
         <ul class="nav nav-footer justify-content-end">
           <li class="nav-item">
-            <a href="/" class="nav-link" target="_blank">Techievibe</a>
+            <a href="/" class="nav-link">Techievibe</a>
           </li>
           <li class="nav-item">
-            <a href="/about-us" class="nav-link" target="_blank">About Us</a>
+            <a href="/about/who-i-am" class="nav-link">About</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link" target="_blank">Privacy Policy</a>

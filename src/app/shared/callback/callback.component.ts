@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-callback',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CallbackComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    alert("yes, hitting the callback");
+    setTimeout(() => {
+      this.router.navigateByUrl("/home");
+    }, 3000);
   }
 
 }
