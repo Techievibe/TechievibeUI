@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 import { SectionsComponent } from './sections.component';
 import { ButtonsSectionComponent } from './buttons-section/buttons-section.component';
@@ -19,6 +20,8 @@ import { NucleoSectionComponent } from './nucleo-section/nucleo-section.componen
 import { VersionsSectionComponent } from './versions-section/versions-section.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
+import { NavbarHeroSectionComponent } from './navbar-hero-section/navbar-hero-section.component';
+import { NavbarHeroContentSectionComponent } from './navbar-hero-content-section/navbar-hero-content-section.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { NgbdModalContent } from './modal/modal.component';
     NucleoSectionComponent,
     VersionsSectionComponent,
     NgbdModalComponent,
-    NgbdModalContent
+    NgbdModalContent,
+    NavbarHeroSectionComponent,
+    NavbarHeroContentSectionComponent
   ],
   entryComponents: [NgbdModalContent],
   imports: [
@@ -43,8 +48,9 @@ import { NgbdModalContent } from './modal/modal.component';
     NgbModule,
     RouterModule,
     NouisliderModule,
-    JwBootstrapSwitchNg2Module
+    JwBootstrapSwitchNg2Module,
+    SharedModule
   ],
-  exports:[ SectionsComponent ]
+  exports:[ SectionsComponent, NavbarHeroSectionComponent ]
 })
 export class SectionsModule { }

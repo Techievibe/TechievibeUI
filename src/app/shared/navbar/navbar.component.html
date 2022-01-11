@@ -1,12 +1,8 @@
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
       <img src="./assets/img/techievibe/logo/logo.png">
     </a>
-    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
-          [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
       <div class="navbar-collapse-header">
         <div class="row">
@@ -24,11 +20,250 @@
           </div>
         </div>
       </div>
-      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4 bg-gradient-warning text-white">
+              <span class="text-uppercase">My Account</span>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
+            <li class="nav-item d-lg-none ml-lg-4" *ngIf="!loginDisplay">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-primary">
+                  <i class="fa fa-sign-in"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Sign In</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4" *ngIf="loginDisplay">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-success">
+                  <i class="ni ni-books"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-success mb-md-1">Profile</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4" *ngIf="loginDisplay">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-warning">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-warning mb-md-1">Settings</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4" *ngIf="loginDisplay">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-warning">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-warning mb-md-1">Sign out</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4 bg-gradient-warning text-white">
+              <span class="text-uppercase">About</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a [routerLink]="['/about/who-i-am']" routerLinkActive="active" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-primary">
+                  <i class="ni ni-badge"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Who I am</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['about/what-i-do']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-success">
+                  <i class="ni ni-books"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-success mb-md-1">What I do</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['about/my-goals']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-warning">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-warning mb-md-1">My goals</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4 bg-gradient-warning text-white">
+              <span class="text-uppercase">Articles</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-primary">
+                  <i class="ni ni-palette"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Technology</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-success">
+                  <i class="ni ni-books"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-success mb-md-1">Health</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-warning">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body">
+                  <span class="text-warning mb-md-1">Everything Else</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4 bg-gradient-warning text-white">
+              <span class="text-uppercase">Fantasy Sport</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-primary">
+                  <img src="./assets/img/techievibe/fantasy-sport/cricket_menu_icon.png" height="20px" width="20px" />
+                </div>
+                <div class="media-body">
+                  <span class="text-primary mb-md-1">Cricket</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" href="/secure/basketball" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-success">
+                  <img src="./assets/img/techievibe/fantasy-sport/basketball_menu_icon.png" height="20px" width="20px" />
+                </div>
+                <div class="media-body">
+                  <span class="text-success mb-md-1">Basketball</span>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape text-white">
+                  <img src="./assets/img/techievibe/fantasy-sport/soccer_menu_icon.png" height="20px" width="20px" />
+                </div>
+                <div class="media-body">
+                  <span class="text-warning mb-md-1">Others</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none mt-3 mb-2 text-center">
+            <li class="nav-item d-lg-none ml-lg-4 bg-gradient-warning text-white">
+              <span class="text-uppercase">Like/Share/Follow us</span>
+            </li>
+          </ul>
+          <div style="clear:both;" class="d-lg-none"></div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none flex-row">
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-facebook"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-twitter"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-instagram"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item d-lg-none ml-lg-4 text-center w-25">
+              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+                <div class="icon icon-shape">
+                  <i class="fa fa-github"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+      <div style="clear:both;" class="d-lg-none"></div>
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
         <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" role="button" href="#">
-            <i class="ni ni-ui-04 d-lg-none"></i>
-            <span class="nav-link-inner--text">Blogs</span>
+          <a class="nav-link d-none d-lg-inline-block" role="button" data-toggle="dropdown" dropdowntoggle role="button" aria-haspopup="true">
+            <!-- <i class="ni ni-ui-04 d-lg-none"></i> -->
+            <span class="nav-link-inner--text">About</span>
+          </a>
+          <div class="dropdown-menu-xl dropdown-menu" >
+            <div class="dropdown-menu-inner">
+              <a [routerLink]="['/about/who-i-am']" routerLinkActive="active" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                  <i class="ni ni-badge"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="heading text-primary mb-md-1">Who I am</h6>
+                  <p class="description d-none d-md-inline-block mb-0">An IT professional, a firm believer and follower of the concept of <strong>knowns</strong> and <strong>unknowns</strong>.
+                  </p>
+                </div>
+              </a>
+              <a routerLinkActive="active" [routerLink]="['about/what-i-do']" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                  <i class="ni ni-books"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="heading text-success mb-md-1">What I do</h6>
+                  <p class="description d-none d-md-inline-block mb-0">Where I live, my love for technology, my learnings, and passions.</p>
+                </div>
+              </a>
+              <a routerLinkActive="active" [routerLink]="['about/my-goals']" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                  <i class="ni ni-planet"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h5 class="heading text-warning mb-md-1">My goals</h5>
+                  <p class="description d-none d-md-inline-block mb-0">A complete list of life goals, professional goals and fitness/health goals and progress.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link d-none d-lg-inline-block" data-toggle="dropdown" dropdowntoggle role="button" aria-haspopup="true">
+            <!-- <i class="ni ni-ui-04 d-lg-none"></i> -->
+            <span class="nav-link-inner--text">Articles</span>
           </a>
           <div class="dropdown-menu-xl dropdown-menu" >
             <div class="dropdown-menu-inner">
@@ -37,7 +272,7 @@
                   <i class="ni ni-palette"></i>
                 </div>
                 <div class="media-body ml-3">
-                  <h6 class="heading text-primary mb-md-1">Aarush Artz</h6>
+                  <h6 class="heading text-primary mb-md-1">Technology</h6>
                   <p class="description d-none d-md-inline-block mb-0">Small 2 line text goes in here about Aarush Art work and his blog/articles.</p>
                 </div>
               </a>
@@ -46,7 +281,7 @@
                   <i class="ni ni-books"></i>
                 </div>
                 <div class="media-body ml-3">
-                  <h6 class="heading text-success mb-md-1">Pavi Readz</h6>
+                  <h6 class="heading text-success mb-md-1">Health</h6>
                   <p class="description d-none d-md-inline-block mb-0">Small 2 line text goes in here about Pavi reading and her videos/blog/articles.</p>
                 </div>
               </a>
@@ -63,8 +298,8 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link no-caret" data-toggle="dropdown" role="button">
-            <i class="ni ni-collection d-lg-none"></i>
+          <a class="nav-link d-none d-lg-inline-block" data-toggle="dropdown" role="button">
+            <!-- <i class="ni ni-collection d-lg-none"></i> -->
             <span class="nav-link-inner--text">Fantasy Sport</span>
           </a>
           <div class="dropdown-menu-xl dropdown-menu" >
@@ -78,7 +313,7 @@
                   <p class="description d-none d-md-inline-block mb-0">Small 2 line text goes in here about the cricket fantasy game. what is in there for players.</p>
                 </div>
               </a>
-              <a routerLinkActive="active" [routerLink]="['documentation/colors']" class="media d-flex align-items-center">
+              <a routerLinkActive="active" href="/secure/basketball" class="media d-flex align-items-center">
                 <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
                   <img src="./assets/img/techievibe/fantasy-sport/basketball_menu_icon.png" height="30px" width="30px" />
                 </div>
@@ -101,50 +336,60 @@
         </li>
       </ul>
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://www.facebook.com/phani.narra" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
             <i class="fa fa-facebook-square"></i>
             <span class="nav-link-inner--text d-lg-none">Facebook</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://www.instagram.com/narra_phani/" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
             <i class="fa fa-instagram"></i>
             <span class="nav-link-inner--text d-lg-none">Instagram</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://twitter.com/phani131" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
             <i class="fa fa-twitter-square"></i>
             <span class="nav-link-inner--text d-lg-none">Twitter</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="nav-link nav-link-icon" href="https://github.com/phaninarra" target="_blank" data-toggle="tooltip" title="Star us on Github">
             <i class="fa fa-github"></i>
             <span class="nav-link-inner--text d-lg-none">Github</span>
           </a>
         </li>
-        <li class="nav-item d-none d-lg-block ml-lg-4">
-          <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
+        <li class="nav-item d-none d-lg-block ml-lg-4" *ngIf="!loginDisplay">
+          <a [routerLink]="" (click)="login()" class="btn btn-neutral btn-icon">
             <span class="btn-inner--icon">
               <i class="fa fa-sign-in mr-2"></i>
             </span>
             <span class="nav-link-inner--text">Sign In</span>
           </a>
         </li>
-        <li class="nav-item d-none d-lg-block ml-lg-4">
-            <span class="nav-link-inner--text text-white">OR</span>
-        </li>
-        <li class="nav-item d-none d-lg-block ml-lg-4">
-          <a href="https://www.creative-tim.com/product/argon-design-system-angular?ref=adsa-navbar" target="_blank" class="btn btn-neutral btn-icon">
-            <span class="btn-inner--icon">
-              <i class="fa fa-user-plus mr-2"></i>
-            </span>
-            <span class="nav-link-inner--text">Sign Up</span>
-          </a>
+        <li class="nav-item d-none d-lg-block ml-lg-4" *ngIf="loginDisplay">
+          <div class="btn-group" ngbDropdown>
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" ngbDropdownToggle>
+              <i class="fa fa-sign-out mr-2"></i>
+                My Account
+            </button>
+            <div ngbDropdownMenu>
+              <a ngbDropdownItem (click)="getProfile()" [routerLink]="profile">Profile</a>
+              <a ngbDropdownItem href="javascript:void(0)">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a ngbDropdownItem (click)="logout()" [routerLink]="">
+                <i class="fa fa-sign-out mr-2"></i>
+                Sign out
+              </a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
