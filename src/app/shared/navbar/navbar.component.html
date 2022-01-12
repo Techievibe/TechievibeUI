@@ -27,7 +27,7 @@
           </ul>
           <ul class="navbar-nav navbar-nav-hover align-items-lg-center float-none">
             <li class="nav-item d-lg-none ml-lg-4" *ngIf="!loginDisplay">
-              <a routerLinkActive="active" [routerLink]="['documentation/tutorial']" class="media d-flex align-items-center">
+              <a [routerLink]="" (click)="login()" class="media d-flex align-items-center">
                 <div class="icon icon-shape text-primary">
                   <i class="fa fa-sign-in"></i>
                 </div>
