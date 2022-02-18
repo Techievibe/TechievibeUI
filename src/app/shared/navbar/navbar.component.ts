@@ -30,6 +30,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private lastPoppedUrl: string;
     private yScrollStack: number[] = [];
     private userProfile: UserProfile;
+    private  emailAddress: string;
     isIframe = false;
     loginDisplay = false;
     private readonly _destroying$ = new Subject<void>();
@@ -71,9 +72,19 @@ export class NavbarComponent implements OnInit, OnDestroy {
        this.setLoginDisplay();
      })
 
-     //this.getProfile();
-     //MS AD END
+    }
 
+    getProfileFromService(): Boolean {
+      //alert("setting profile, user is already logged in");
+      //alert(this.userProfile);
+      this.profileDataService.ProfileData.subscribe((user: UserProfile) => {
+        //alert("this is data stored for user." + JSON.stringify(user));
+        this.userProfile = user;
+      });
+      if(this.userProfile != null)
+        return true;
+      else
+        return false;
     }
 
     getProfile() {
@@ -81,13 +92,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
           .subscribe(profile => {
             console.log(profile);
             this.profile = profile;
-            console.log("Profile Firstname: " + this.profile.givenName);
-            console.log("Profile Lastname: " + this.profile.surname);
-            this.userProfile.email_address = this.profile.userPrincipalName;
             this.userProfile.first_name = this.profile.givenName;
             this.userProfile.last_name = this.profile.surname;
-
             this.profileDataService.ProfileData.next(this.userProfile);
+            console.clear();
+            console.log("User profile populated" + JSON.stringify(this.userProfile));
           });
     }
 
@@ -137,9 +146,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
         .subscribe({
           next: (result) => {
             console.log(result);
-            this.profile.givenName = result.account.name;
+            this.userProfile = new UserProfile();
+            this.userProfile.email_address = result.account.username;
             this.setLoginDisplay();
-            //this.getProfile();
+            this.getProfile();
           },
           error: (error) => console.log(error)
         });
@@ -148,6 +158,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
         .subscribe({
           next: (result) => {
             console.log(result);
+            this.userProfile = new UserProfile();
+            this.userProfile.email_address = result.account.username;
             this.setLoginDisplay();
             this.getProfile();
           },
@@ -164,6 +176,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   setLoginDisplay() {
     this.loginDisplay = this.authService.instance.getAllAccounts().length > 0;
+   
+    if(this.loginDisplay)
+     {
+        this.getProfileFromService();
+     }
   }
 
   ngOnDestroy(): void {
